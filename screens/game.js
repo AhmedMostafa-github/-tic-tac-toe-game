@@ -18,7 +18,7 @@ const game = () => {
         {winnerGame
           ? `Winner is: ${winnerGame}`
           : `Next Player: ${isNext ? "X" : "O"}`}
-        {tie == 10 && alert("Ops No Winner, Tie")}
+        {!winnerGame && tie == 10 && alert("Ops No Winner, Tie")}
       </Text>
 
       <Board board={current} onPress={handleGame} />
